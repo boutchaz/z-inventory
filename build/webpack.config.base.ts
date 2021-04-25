@@ -1,6 +1,8 @@
 import path from 'path'
 import webpack, { Configuration } from 'webpack'
 
+import CopyPlugin from 'copy-webpack-plugin'
+
 import TerserPlugin from 'terser-webpack-plugin'
 
 import buildConfig from './config'
@@ -16,7 +18,9 @@ const webpackConfig: Configuration = {
     __dirname: false,
     __filename: false,
   },
-
+  externals: {
+    sqlite3: 'commonjs sqlite3',
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, '../app'),

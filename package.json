@@ -7,6 +7,7 @@
   "main": "dist/main/main.js",
   "author": "lanten",
   "scripts": {
+    "postinstall": "electron-builder install-app-deps",
     "ts:dev": "ts-node -P build/tsconfig.json build/tasks/dev-server.ts",
     "ts:build": "ts-node -P build/tsconfig.json build/tasks/build.ts",
     "dev": "cross-env NODE_ENV=development BUILD_ENV=dev npm run ts:dev",
@@ -16,6 +17,7 @@
   "devDependencies": {
     "@babel/runtime": "^7.13.10",
     "@types/classnames": "^2.2.11",
+    "@types/copy-webpack-plugin": "^6.4.1",
     "@types/html-webpack-plugin": "^3.2.5",
     "@types/mini-css-extract-plugin": "^1.4.1",
     "@types/node": "^14.14.37",
@@ -35,6 +37,7 @@
     "axios": "^0.21.1",
     "chalk": "^4.1.0",
     "classnames": "^2.2.6",
+    "copy-webpack-plugin": "^8.1.1",
     "cross-env": "^7.0.3",
     "css-hot-loader": "^1.4.4",
     "css-loader": "^5.2.0",
@@ -81,5 +84,12 @@
   "bugs": {
     "url": "https://github.com/lanten/electron-antd/issues"
   },
-  "homepage": "https://github.com/lanten/electron-antd#readme"
+  "homepage": "https://github.com/lanten/electron-antd#readme",
+  "dependencies": {
+    "@types/faker": "^5.5.2",
+    "@types/lodash": "^4.14.168",
+    "faker": "^5.5.3",
+    "lodash": "^4.17.21",
+    "sqlite3": "^5.0.2"
+  }
 }

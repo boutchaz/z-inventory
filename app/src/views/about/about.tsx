@@ -21,7 +21,7 @@ export default class About extends React.Component<PageProps> {
           >
             lanten.
           </a>{' '}
-          All rights (demo)
+          All rights (azerazer)
         </p>
       </div>
     )

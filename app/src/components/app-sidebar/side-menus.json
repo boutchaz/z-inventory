@@ -28,5 +28,11 @@
     "href": "#/about",
     "title": "About",
     "icon": "information"
+  },
+  {
+    "key": "MyView",
+    "href": "#/zakaria",
+    "title": "zakaria",
+    "icon": "information"
   }
 ]

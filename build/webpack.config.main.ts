@@ -1,6 +1,6 @@
 import path from 'path'
 import { Configuration, WebpackPluginInstance } from 'webpack'
-
+import CopyPlugin from 'copy-webpack-plugin'
 import WebpackBar from 'webpackbar'
 
 import webpackConfigBase from './webpack.config.base'
@@ -35,6 +35,9 @@ const webpackConfig: Configuration = {
   plugins: [
     ...(webpackConfigBase?.plugins ?? []),
     new WebpackBar({ name: 'Main    ', color: '#799AFE' }),
+    new CopyPlugin({
+      patterns: [{ from: 'db', to: 'resources' }],
+    }),
   ] as WebpackPluginInstance[],
 }
 
